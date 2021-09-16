@@ -1,0 +1,41 @@
+$blank:rgb(61, 60, 60);
+$red:#ff5869;
+$pink:#f4c3cc;
+$pink-puople:#d98ba3;
+$puople:#B46B7A;
+$gray-puople:#c6b0bc;
+%border-shadow{
+    border: 1px solid rgb(35, 34, 34);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.5);
+}
+.color-sample{
+    width: 500px;
+    @extend %border-shadow;
+    p{
+        color: #fff;
+        display: block;
+        margin: 0;
+    }
+    .color{
+        font-size: 16px;
+        line-height: 3;
+        text-align: center;
+        &.color1{
+            background-color: $gray-puople;
+        }
+        &.color2{
+            background-color: $pink;
+        }
+        &.color3{
+            background-color: $pink-puople;
+        }
+        &.color4{
+            background-color: $puople;
+        }
+        &.color5{
+            background-color: $red;
+            height: 250px;
+        }
+
+    }
+}

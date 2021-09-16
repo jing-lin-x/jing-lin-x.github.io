@@ -1,0 +1,102 @@
+@import 'normalize';
+*{
+    box-sizing: border-box;
+    // @extend %border;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html,body{
+    height: 100%;
+}
+h1,h2,p{
+    margin: 0;
+}
+$white:#fff;
+$puople:rgb(217, 184, 221);
+$price:#ff1919;
+%border{
+    border: 1px solid #333;
+}
+%widht{
+    width:percentage(1/2);
+}
+%mar-left{
+    margin-left:5px;
+}
+.warpper{
+    height: 100%;
+    background:linear-gradient(#2d84e7,rgb(217, 246, 138),#fff);
+    overflow: hidden;
+
+    .product{
+        width: 500px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 128px;
+        background-color:$white;
+        display: flex;
+        border-radius: 5px;
+        padding: 20px;
+        // @extend %border;
+        .infro{
+            // @extend %border;
+            @extend %widht;
+            background: rgb(235, 231, 231);
+            .title{
+                white-space: nowrap;
+                font-size: 36px;
+                font-weight: 800;
+                line-height: 2;
+                position: relative;
+                z-index: 10;
+                margin-top: 15px;
+                margin-bottom: 10px;
+                @extend %mar-left;
+                text-shadow:15px 10px 15px rgba(0,0,0,0.5);
+
+            }
+            .price{
+                font-size: 26px;
+                line-height: 46px;
+                color:$price;
+                margin-bottom: 5px;
+                @extend %mar-left;
+                
+            }
+            .pra{
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 15px;
+                @extend %mar-left;
+                
+            }
+            .btn{
+                display: inline-block;
+                padding: 5px 10px;
+                @extend %border;
+                margin-left: 20px;
+                letter-spacing: 8px;
+                background-color:$puople;
+                box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+    
+            }
+        }
+        .image{
+            // @extend %border;
+            @extend %widht;
+            overflow: hidden;
+            img{
+                margin-top: 100px;
+                display: block;
+                width: 100%;
+                 background-size: contain;
+            }
+               
+        }
+        
+    }
+}

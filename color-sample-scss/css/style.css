@@ -1,0 +1,43 @@
+.color-sample {
+  border: 1px solid #232222;
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.color-sample {
+  width: 500px;
+}
+
+.color-sample p {
+  color: #fff;
+  display: block;
+  margin: 0;
+}
+
+.color-sample .color {
+  font-size: 16px;
+  line-height: 3;
+  text-align: center;
+}
+
+.color-sample .color.color1 {
+  background-color: #c6b0bc;
+}
+
+.color-sample .color.color2 {
+  background-color: #f4c3cc;
+}
+
+.color-sample .color.color3 {
+  background-color: #d98ba3;
+}
+
+.color-sample .color.color4 {
+  background-color: #B46B7A;
+}
+
+.color-sample .color.color5 {
+  background-color: #ff5869;
+  height: 250px;
+}
+/*# sourceMappingURL=style.css.map */
