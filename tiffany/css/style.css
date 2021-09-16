@@ -1,4 +1,4 @@
-@charset "utt-8";
+@charset "utf-8";
 /*
  * Page name
  * Copy right 2020
@@ -353,29 +353,25 @@ margin-bottom: 20px;
         position: fixed;
         z-index: 500;
         top:0;
-        left: 0;
+        left: -80%;
         background-color:#fff;
-        width: 100%;
+        width: 0%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content:start;
         opacity: 0;
         visibility: hidden;
-        transform: all 0.6s;
-        animation:appeaar 3s 0.1s forwards;
+        transition: all 0.3s ;
     }
-    @keyframes appeaar {
-        0%{width:0%;
-        }
-        100%{width:100%;
-
-        }
-    }
-    .navbar .nav.active{
-        width:100%;
-        opacity: 1;
-        visibility:visible ;
+    
+}
+.navbar .nav.active{
+    left: 0;
+    
+    width:100%;
+    opacity: 1;
+    visibility:visible ;
 
 
     }
@@ -402,7 +398,6 @@ margin-bottom: 20px;
 
 }
 
-}
 /* menu-toggle */
 .menu-toggle{
     width: 44px;
@@ -413,7 +408,7 @@ margin-bottom: 20px;
     top:5px;
     left: 15px;
     z-index: 500;
-    transition:
+    
 }
 .menu-toggle.active{
     left: 95%;
@@ -427,6 +422,7 @@ margin-bottom: 20px;
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
+    transition: 0.3s;
 }
 .menu-toggle span:nth-child(1){
     top: 10px;
@@ -762,7 +758,7 @@ margin-bottom: 20px;
         line-height: 12px;
     }
     .news .owl-theme .owl-dots{
-        border: 1px solid rgb(152, 69, 69);
+        /* border: 1px solid rgb(152, 69, 69); */
         display: flex;
         justify-content: center;
     }

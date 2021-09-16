@@ -104,7 +104,7 @@
                             <a href="#!" class="icon customer"><span>顧客關懷<span></a>
                         </li>
                         <li class="nav-item sm lg-hidden">
-                            <a href="#!" class="icon account"><span>我的帳戶</span></a>
+                            <a href="#!" class="icon account"><span>我的帳戶</span></a>
                         </li>
                         <li class="nav-item sm lg-hidden">
                             <a href="#!" class="icon map"><span>專門店定位器</span></a>
@@ -191,57 +191,53 @@
             </div>
 
             <!-- about end -->
-            <!-- news start -->.
+            <!-- news start -->
+           
             <div class="hero">
-                <div class="news container solid-bottom">
+                <div class="container solid-bottom">
                     <h3 class="title">最新消息</h3>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <a href="#!">
-                                    <div class="news-item">
-                                        <div class="image-container">
-                                            <div class="image" style="background-image: url('imagess/img/news_1.jpg');"></div>
-                                        </div>
-                                        <div class="privew">
-                                            <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
-                                            <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-                                            <p class="prar">按此系列 ></p>
-                                        </div>
+                     <div class="news">
+                         <div class="owl-carousel owl-theme">
+                                <div class="news-item">
+                                    <div class="image-container">
+                                        <div class="image" style="background-image: url('imagess/img/news_1.jpg');"></div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <a href="#!">
-                                    <div class="news-item">
-                                        <div class="image-container">
-                                            <div class="image" style="background-image: url('imagess/img/news_2.jpg');"></div>
-                                        </div>
-                                        <div class="privew">
-                                            <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
-                                            <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-                                            <p class="prar">按此系列 ></p>
-                                        </div>
+                                    <div class="privew">
+                                        <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
+                                        <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                                         <p class="prar">按此系列 ></p>
+                                   </div>
+                                </div>
+                            </a>
+                             <a href="#!">
+                                <div class="news-item">
+                                    <div class="image-container">
+                                        <div class="image" style="background-image: url('imagess/img/news_2.jpg');"></div>
+                                     </div>
+                                    <div class="privew">
+                                        <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
+                                        <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                                        <p class="prar">按此系列 ></p>
+                                     </div>
+                                </div>
+                            </a>
+                            <a href="#!">
+                                <div class="news-item">
+                                     <div class="image-container">
+                                        <div class="image" style="background-image: url('imagess/img/news_3.jpg');"></div>
+                                     </div>
+                                    <div class="privew">
+                                        <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
+                                        <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                                        <p class="prar">按此系列 ></p>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <a href="#!">
-                                    <div class="news-item">
-                                        <div class="image-container">
-                                            <div class="image" style="background-image: url('imagess/img/news_3.jpg');"></div>
-                                        </div>
-                                        <div class="privew">
-                                            <p class="prar">Lorem ipsum, dolor sit amet consecte</p>
-                                            <p class="prar">Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-                                            <p class="prar">按此系列 ></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
-                    <div class="end"></div>
-                </div>
+                     </div>
+                 </div>
             </div>
+          
             <!-- news end -->
             <!-- perfasion start -->
             <!-- perfasion end -->
@@ -483,7 +479,9 @@
                     loop:false
                 }
             }
-})
+        })
+       
+
     $('.menu-toggle').on('click', function(){
 		$(this).toggleClass('active');
         $('.navbar .nav').toggleClass('active');
@@ -492,13 +490,29 @@
     $('.navbar .nav-link',).on('click', function(){
 		$('.menu-toggle').removeClass('active');
         $('.navbar .nav').removeClass('active');
- 
         
 	})
-   
-
-
-        
-    })
+})
+$('.news .owl-carousel').owlCarousel({
+            loop:true,
+             margin:10,
+             navText:[],
+            responsiveClass:true,
+              responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                400:{
+                    items:1,
+                    nav:true
+                },
+                700:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                }
+            }
+        })
 </script>
 </html>
