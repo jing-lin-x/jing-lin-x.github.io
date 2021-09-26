@@ -995,6 +995,14 @@ visibility:visible ;
     background-color: rgb(173, 60, 60); */
     margin-left: -25%;
 }
+.footer .change-map .list-map{
+    /* border: 1px solid #333; */
+    line-height: 18px;
+    padding-top: 15px;
+    padding-right: 58px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
 .change-active .nav-item{
     padding-top: 25px;
 }
@@ -1006,7 +1014,8 @@ visibility:visible ;
 }
 .change-active .nav-item .change{
     margin-bottom: 20px;
-}
+}
+
 @media screen and ( max-width:768px ) {
     .our{
     display:none ;
