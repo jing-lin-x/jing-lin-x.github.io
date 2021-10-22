@@ -26,7 +26,6 @@
                         <div class="col-lg-4">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <h3 class="topic"></h3>
                                     <a href="#!" class="nav-link">Products</a>
                                 </li>
                                 <li class="nav-item">
@@ -189,7 +188,7 @@
                                         </div>
                                     </a>
                                 </div>
-
+                               
                                 <div class="col-lg-4">
                                     <a href="#!" class="sllers-link">
                                         <div class="sllers-content appear-3">
@@ -391,30 +390,29 @@
                     <div class="about-loop">
                         <div class="owl-carousel owl-theme">
                             <div class="about-slider-item">
-                                <h3 class="topic">長く続く、心地よさ</h3>
+                                <h3 class="topic">大自然の恵み</h3>
                                 <div class="image-container-ab">
-                                    <div class="about-imgae"
-                                        style="background-image: url(img/top/about_slide_01.jpeg);"></div>
+                                    <div class="image" style="background-image: url(img/top/about_slide_01.jpeg);"></div>
                                 </div>
                             </div>
                             <div class="about-slider-item">
                                 <h3 class="topic">長く続く、心地よさ</h3>
                                 <div class="image-container-ab">
-                                    <div class="about-imgae"
-                                        style="background-image: url(img/top/about_slide_02.jpeg);"></div>
+                                    <div class="image" style="background-image: url(img/top/about_slide_02.jpeg);"></div>
                                 </div>
                             </div>
                             <div class="about-slider-item">
                                 <h3 class="topic">いつまでも、肌にサラサラ</h3>
                                 <div class="image-container-ab">
-                                    <div class="about-imgae"
-                                        style="background-image: url(img/top/about_slide_03.jpeg);"></div>
+                                    <div class="image" style="background-image: url(img/top/about_slide_03.jpeg);"></div>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
 
+                    </div>
+                    
                 </div>
                 <!-- about--end -->
 
@@ -444,7 +442,7 @@
             $('.navbar .nav').remove0Class('active');
 
         })
-        $('.owl-carousel').owlCarousel({
+        $('.about-loop .owl-carousel').owlCarousel({
             items: 1,
             nav: false,
             navText: [],
@@ -452,17 +450,11 @@
             mouseDrag: false,
             autoplay: true,
             autoplayTimeout: 3000
+
+
+
+
         })
-        // about-slider
-        $('.about .owl-carousel').owlCarousel({
-            center: true,
-            items: 3,
-            loop: true,
-
-            margin: 10,
-         
-        });
-
     })
 </script>
 
