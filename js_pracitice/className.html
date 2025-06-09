@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        border: 2px solid #696767;
+        margin: 10% auto;
+        transition:all 2s;
+    }
+
+    .button {
+        width: 100px;
+        height: 30px;
+        border: 1px solid black;
+        text-align: center;
+        margin: auto;
+        margin-top: -30px;
+        line-height: 30px;
+
+
+    }
+
+    .sm-style {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 187, 255);
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <div class="button">CHARNG</div>
+    <script>
+        const box = document.querySelector('.box')
+
+        // 增加class名並保留原有的class名  方法一
+        // box.classList.add('pp')
+
+        // 增加class名並保留原有的class名 方法二
+        // box.className +=' sm-style';   
+
+        console.log(box)
+
+        // 方法三 使用toggle來改變
+        const button = document.querySelector('.button')
+
+        button.addEventListener('click', () => {
+            box.classList.toggle('sm-style')
+
+            button.style.backgroundColor='yellow';
+
+        }
+        )
+    </script>
+</body>
+
+</html>
