@@ -1,0 +1,92 @@
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        margin: 0;
+        height: 100vh;
+        /* background-color: #70bb14;s */
+        position: relative;
+
+    }
+
+    .box {
+        height: 600px;
+        background-color: #ed6d6d;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: all 2s;
+
+
+    }
+
+    .tt {
+        display: flex;
+        margin-top: -30px;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        width: 100px;
+        height: 30px;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 22px;
+        transition: all 2s;
+    }
+
+    .active {
+        padding: 10px 10px;
+        margin-top: -20px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <div class="box">
+            <ul class="tt">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const sliderData = [
+            { color: '#ed6d6d' },
+            { color: 'rgb(100,67,68)' },
+            { color: 'rgb(100,200,30)' },
+            { color: 'rgb(1,240,150)' },
+        ];
+
+        const box = document.querySelector('.box');
+        const liItems = document.querySelectorAll('.tt li');
+
+        liItems.forEach((li, index) => {
+            li.addEventListener('click', () => {
+                // 更換 box 顏色
+                box.style.backgroundColor = sliderData[index].color;
+
+                // 重設所有 li，再設定點選的 li 為 active
+                liItems.forEach((item, i) => {
+                    item.classList.remove('active');
+                    item.style.backgroundColor = 'white';
+                });
+
+                li.classList.add('active');
+                li.style.backgroundColor = sliderData[index].color;
+                  li.style.borderBottom = "none"
+            });
+        });
+    </script>
+
+</body>
