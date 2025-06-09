@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+    margin: 0;
+    padding: 0;
+    }
+    .wrapper{
+    background: #f5e756;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .cricle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #d7d3d3;
+    transition:all 0.3s ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    }
+    .cricle.active{
+    width: 600px;
+    height: 600px;
+    background-color: #4a54e3;
+    }
+   h1.font{
+    font-size:80px;
+   text-wrap: nowrap;
+    transition:all 0.5s;
+   
+   }
+</style>
+<body>
+    
+    <div class="wrapper">
+        <div class="box">
+            <div class="cricle">
+                <h1 class="font">進入你心裡</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        const box=document.querySelector('.box')
+        const cricle=document.querySelector('.cricle')
+        const font=document.querySelector('.font')
+
+        // box.addEventListener('focus',function(){
+            
+        // })
+        // ２．獲得焦點
+        cricle.addEventListener('mouseenter', function () {
+cricle.style.width='600px'
+cricle.style.height='600px'
+cricle.style.backgroundColor='#4a54e3'
+font.innerHTML='進入你心裡'
+
+    // // 產生隨機的 x, y 偏移值
+    // const offsetX = Math.random() * 200 - 100  // -100 到 +100
+    // const offsetY = Math.random() * 200 - 100
+
+    // cricle.style.transform = `translate(${offsetX}px, ${offsetY}px)`
+
+// 2會超出畫面
+//     const maxX = window.innerWidth - cricle.offsetWidth
+// const maxY = window.innerHeight - cricle.offsetHeight
+
+// const offsetX = Math.random() * maxX
+// const offsetY = Math.random() * maxY
+
+// cricle.style.transform = `translate(${offsetX}px, ${offsetY}px)`
+
+            
+// 3 避免超出畫面circle 必須設成 position: absolute 或 fixed 才能改變 left 和 top。
+// 為了避免超出畫面，要從 window.innerWidth 減掉 circle 的寬度。z
+const randomLeft = Math.random() * (window.innerWidth - 300)  // 300 是圓的寬度
+    const randomTop = Math.random() * (window.innerHeight - 300) // 300 是圓的高度
+
+    cricle.style.position = 'absolute'
+    cricle.style.left = randomLeft + 'px'
+    cricle.style.top = randomTop + 'px'
+
+
+// 方法四
+// cricle.style.position = 'absolute'
+//     cricle.style.left = '175px'
+//     cricle.style.top = '187px'
+    
+    
+    
+})
+cricle.addEventListener('mouseleave', function () {
+    cricle.style.width='300px'
+    cricle.style.height='300px'
+    cricle.style.backgroundColor='#d7d3d3'
+    font.innerHTML='我離開了...'
+cricle.style.position = 'absolute'
+
+    cricle.style.left = '823px'
+    cricle.style.top = '433px'
+
+            
+         
+        })
+
+        // 測量滑鼠位置
+    //     document.addEventListener('mousemove', function(e) {
+    //   const x = e.clientX
+    //   const y = e.clientY
+
+    //   // 更新 circle 的位置
+    //   cricle.style.left = x + 'px'
+    //   cricle.style.top = y + 'px'
+
+    //   // 顯示座標文字
+    //   font.textContent = `X: ${x}, Y: ${y}`
+    // })
+
+    </script>
+</body>
+</html>
